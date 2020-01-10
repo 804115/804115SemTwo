@@ -12,13 +12,9 @@ public class Sort
 	{
 		Comparable[] creatureList = new Creature[3];
 		//add 3 creatures to creatureList
-		Creature creature1 = new Creature(3);
-		Creature creature2 = new Creature(4);
-		Creature creature3 = new Creature(5);
-		
-		creatureList[0] = creature1;
-		creatureList[1] = creature2;
-		creatureList[2] = creature3;
+		creatureList[0] = new Creature(3);
+		creatureList[1] = new Creature(4);
+		creatureList[2] = new Creature(5);
 		
 		Arrays.sort(creatureList);  		//will throw an exception until
 															//creatures are added to the array		
