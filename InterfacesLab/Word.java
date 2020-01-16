@@ -11,9 +11,8 @@ public class Word implements Comparable<Word>
 
   public int compareTo(Word other) 
   {
-
      //must add code to complete 
-
+   
      return 1; 
   }
 
