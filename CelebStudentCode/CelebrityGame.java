@@ -27,7 +27,8 @@ public class CelebrityGame
     public CelebrityGame()
     {
         celebGameList = new ArrayList<Celebrity>();
-        gameCelebrity = new Celebrity("Bill Gates", "Microsoft Founder");
+        celebGameList.add(new Celebrity("Bill Gates", "Microsoft Founder"));
+        //gameCelebrity = new Celebrity("Bill Gates", "Microsoft Founder");
         gameWindow = new CelebrityFrame(this);
     }
 
@@ -50,7 +51,15 @@ public class CelebrityGame
      */
     public boolean processGuess(String guess)
     {
-        return false;
+        guess.trim();
+        guess.toLowerCase();
+        if (guess == gameCelebrity.getAnswer()){
+            celebGameList.remove(gameCelebrity.getAnswer());
+            gameCelebrity = celebGameList.get(0);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**
@@ -127,7 +136,12 @@ public class CelebrityGame
      */
     public int getCelebrityGameSize()
     {
-        return 0;
+        int count = 0;
+        for(int i = 0; i < celebGameList.size(); i++){
+            count ++;
+        }
+        
+        return count;
     }
 
     /**
@@ -138,7 +152,7 @@ public class CelebrityGame
      */
     public String sendClue()
     {
-        return null;
+        return gameCelebrity.getClue();
     }
 
     /**
