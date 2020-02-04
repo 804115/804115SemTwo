@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Shuffle
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Shuffle\ here.\r\n\r\n\ @author\ (Jade)\r\n\ @version\ (204)\r\n
+comment1.params=s1
+comment1.target=Shuffle(int[])
+comment2.params=
+comment2.target=void\ main()
+numComments=3
